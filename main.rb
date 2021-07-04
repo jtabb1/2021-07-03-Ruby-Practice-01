@@ -9,11 +9,16 @@ def square_array_01(array)
   return_array
 end
 
-def square_array(array)
+def square_array_00(array)
   # your code here
   return_array = []
   array.each{|a| return_array.push(a**2)}
   return_array
+end
+
+def square_array(array)
+  # your code here
+  array.collect{|et| et ** 2}
 end
 
 puts(square_array([1,2,3]))
