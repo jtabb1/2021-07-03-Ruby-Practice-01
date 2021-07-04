@@ -166,4 +166,16 @@ end
 # now_serving(q)
 # line(q)
 
+def reverse_each_word(str)
+  str = str.split(" ")
+  out = ""
+  str.each do |e|
+    out = "#{out} #{e.reverse}"
+  end
+  # out.join(" ")
+  puts out
+  # puts str.inspect
+end
 
+str = "Hello there, and how are you?"
+reverse_each_word(str)
