@@ -147,8 +147,7 @@ def now_serving(q)
     puts str
     return str
   end
-  str = "Currently serving #{q.shift}."
-  puts str
+  puts "Currently serving #{q.shift}."
   return q
 end
 
@@ -161,7 +160,6 @@ end
 # take_a_number(q, "Kent").inspect
 # line(q)
 # now_serving(q)
-# puts q
 # line(q)
 # take_a_number(q, "Matz")
 # line(q)
