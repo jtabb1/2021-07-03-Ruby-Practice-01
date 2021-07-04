@@ -114,4 +114,49 @@ def oxford_comma(array)
   array.join(", ")    
 end
 
-puts oxford_comma(['qa','sw','rf','ui'])
+# puts oxford_comma(['qa','sw','rf','ui'])
+
+# https://github.com/jtabb1/fnp3-037-Iteration-procedural-ruby-phase-3-deli-counter
+# deli_counter.rb
+
+q=[]
+
+def take_a_number(q, name)
+  num = q.size + 1
+  puts "Welcome, #{name}. You are number #{num} in line."
+  return q.push(name)
+end
+
+def line(q)
+  str = "There is nobody waiting to be served!"
+  if q.size == 0 
+    puts str
+    return str
+  end
+  str = "The line is currently:"
+  i = 1
+  q.size.times do
+    str = "#{str} #{i}. #{q[i-1]}"
+    i += 1
+  end
+  puts str
+  return str
+end
+
+def now_serving(q)
+  str = "Currently serving #{q.shift}"
+  puts str
+  return q
+end
+
+take_a_number(q, "Ada")
+take_a_number(q, "Grace").inspect
+take_a_number(q, "Kent").inspect
+line(q)
+now_serving(q)
+puts q
+line(q)
+take_a_number(q, "Matz")
+line(q)
+now_serving(q)
+line(q)
