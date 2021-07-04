@@ -11,9 +11,9 @@ end
 
 def square_array_00(array)
   # your code here
-  return_array = []
-  array.each{|a| return_array.push(a**2)}
-  return_array
+  returns = []
+  array.each{|et| returns.push( et * et )}
+  returns
 end
 
 def square_array(array)
@@ -21,7 +21,25 @@ def square_array(array)
   array.collect{|et| et ** 2}
 end
 
-puts(square_array([1,2,3]))
+# puts(square_array([1,2,3]))
 
-puts(square_array([1,2,3]).inspect)
+# puts(square_array([1,2,3]).inspect)
 
+
+# https://github.com/jtabb1/fnp3-035-procedural-ruby-iteration-phase-3-badges-and-schedules
+# conference_badges
+
+def badge_maker(name)
+  msg = "Hello, my name is #{name}."
+  # puts(msg)
+  # msg
+end
+
+def batch_badge_creator(names)
+  names.collect{|et| "Hello, my name is #{et}."}
+end
+
+def assign_rooms(names)
+end
+# puts badge_maker("Arel")
+puts(batch_badge_creator(['Dana','Edward']).inspect)
