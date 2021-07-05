@@ -191,8 +191,10 @@ end
 # https://github.com/jtabb1/fnp3-041-iteration-procedural-ruby-phase-3-cartoon-collections
 # cartoon_collections.rb
 
-def roll_call_dwarves# code an argument here
-  # Your code here
+def roll_call_dwarves(names)
+  names.each_with_index do |e,i|
+    puts "#{i+1}. #{e}"
+  end
 end
 
 def summon_captain_planet# code an argument here
@@ -207,3 +209,6 @@ def find_the_cheese# code an argument here
   # the array below is here to help
   cheese_types = ["cheddar", "gouda", "camembert"]
 end
+
+names = ["Doc", "Dopey", "Bashful", "Grumpy"]
+roll_call_dwarves(names)
