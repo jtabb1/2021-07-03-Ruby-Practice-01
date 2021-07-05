@@ -197,11 +197,15 @@ def roll_call_dwarves(names)
   end
 end
 
-def summon_captain_planet# code an argument here
-  # Your code here
+def summon_captain_planet(planeteer_calls)
+  planeteer_calls.map do |e|
+    e.capitalize() << "!"
+  end
 end
 
-def long_planeteer_calls# code an argument here
+def long_planeteer_calls(words)
+  
+  # code an argument here
   # Your code here
 end
 
@@ -212,3 +216,6 @@ end
 
 names = ["Doc", "Dopey", "Bashful", "Grumpy"]
 roll_call_dwarves(names)
+planeteer_calls = ["earth", "wind", "fire", "water", "heart"]
+# puts summon_captain_planet(planeteer_calls).inspect
+
