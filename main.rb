@@ -184,5 +184,26 @@ def reverse_each_word(str)
   out
 end
 
-str = "Hello there, and how are you?"
-puts reverse_each_word(str)
+# str = "Hello there, and how are you?"
+# puts reverse_each_word(str)
+
+
+# https://github.com/jtabb1/fnp3-041-iteration-procedural-ruby-phase-3-cartoon-collections
+# cartoon_collections.rb
+
+def roll_call_dwarves# code an argument here
+  # Your code here
+end
+
+def summon_captain_planet# code an argument here
+  # Your code here
+end
+
+def long_planeteer_calls# code an argument here
+  # Your code here
+end
+
+def find_the_cheese# code an argument here
+  # the array below is here to help
+  cheese_types = ["cheddar", "gouda", "camembert"]
+end
