@@ -204,18 +204,36 @@ def summon_captain_planet(planeteer_calls)
 end
 
 def long_planeteer_calls(words)
-  
-  # code an argument here
-  # Your code here
+  words.any? do |e|
+    e.length > 4
+  end
 end
 
-def find_the_cheese# code an argument here
-  # the array below is here to help
+def find_the_cheese(ins)
   cheese_types = ["cheddar", "gouda", "camembert"]
+  ins.detect do |e| 
+    cheese_types.any? do |f|
+      f.include?(e)
+    end
+  end
 end
 
 names = ["Doc", "Dopey", "Bashful", "Grumpy"]
 roll_call_dwarves(names)
 planeteer_calls = ["earth", "wind", "fire", "water", "heart"]
 # puts summon_captain_planet(planeteer_calls).inspect
-
+short_words = ["puff", "go", "two"]
+puts long_planeteer_calls(short_words)
+#=> false
+assorted_words = ["two", "go", "industrious", "bop"]
+puts long_planeteer_calls(assorted_words)
+#=> true
+snacks = ["crackers", "gouda", "thyme"]
+puts find_the_cheese(snacks)
+#=> "gouda"
+soup = ["tomato soup", "cheddar", "oyster crackers", "gouda"]
+puts find_the_cheese(soup)
+#=> "cheddar"
+ingredients = ["garlic", "rosemary", "bread"]
+puts find_the_cheese(ingredients)
+#=> nil
